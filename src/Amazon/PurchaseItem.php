@@ -134,7 +134,7 @@ class PurchaseItem
      *
      * @return PurchaseItem
      */
-    public function parseJsonResponse(): self
+    public function parseJsonResponse()
     {
         $jsonResponse = $this->_response;
         if (!is_array($jsonResponse)) {

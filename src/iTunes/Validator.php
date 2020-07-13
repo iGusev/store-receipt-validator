@@ -75,7 +75,7 @@ class Validator
      *
      * @return string|null
      */
-    public function getReceiptData(): ?string
+    public function getReceiptData()
     {
         return $this->receipt_data;
     }
@@ -87,7 +87,7 @@ class Validator
      *
      * @return $this
      */
-    public function setReceiptData($receipt_data): self
+    public function setReceiptData($receipt_data)
     {
         if (strpos($receipt_data, '{') !== false) {
             $this->receipt_data = base64_encode($receipt_data);
@@ -101,7 +101,7 @@ class Validator
     /**
      * @return string|null
      */
-    public function getSharedSecret(): ?string
+    public function getSharedSecret()
     {
         return $this->shared_secret;
     }
@@ -111,7 +111,7 @@ class Validator
      *
      * @return $this
      */
-    public function setSharedSecret($shared_secret = null): self
+    public function setSharedSecret($shared_secret = null)
     {
         $this->shared_secret = $shared_secret;
 
@@ -135,7 +135,7 @@ class Validator
      *
      * @return $this
      */
-    public function setEndpoint(string $endpoint): self
+    public function setEndpoint(string $endpoint)
     {
         $this->endpoint = $endpoint;
 
@@ -159,7 +159,7 @@ class Validator
      *
      * @return Validator
      */
-    public function setExcludeOldTransactions(bool $exclude): self
+    public function setExcludeOldTransactions(bool $exclude)
     {
         $this->exclude_old_transactions = $exclude;
 
@@ -183,7 +183,7 @@ class Validator
      *
      * @return Validator
      */
-    public function setRequestOptions(array $request_options): self
+    public function setRequestOptions(array $request_options)
     {
         $this->request_options = $request_options;
 
@@ -245,7 +245,7 @@ class Validator
      *
      * @return ResponseInterface
      */
-    public function validate(?string $receipt_data = null, ?string $shared_secret = null): ResponseInterface
+    public function validate(string $receipt_data = null, string $shared_secret = null): ResponseInterface
     {
         if ($receipt_data !== null) {
             $this->setReceiptData($receipt_data);

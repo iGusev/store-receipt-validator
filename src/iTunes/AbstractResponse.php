@@ -265,7 +265,7 @@ abstract class AbstractResponse
      *
      * @return $this
      */
-    public function parseData(): self
+    public function parseData()
     {
         if (!is_array($this->raw_data)) {
             throw new RuntimeException('Response must be an array');
@@ -307,7 +307,7 @@ abstract class AbstractResponse
      *
      * @throws RunTimeException
      */
-    protected function parseIOS7StyleReceipt(): void
+    protected function parseIOS7StyleReceipt()
     {
         $this->receipt = $this->raw_data['receipt'];
         $this->app_item_id = $this->raw_data['receipt']['app_item_id'];
@@ -378,7 +378,7 @@ abstract class AbstractResponse
      *
      * @throws RunTimeException
      */
-    protected function parseIOS6StyleReceipt(): void
+    protected function parseIOS6StyleReceipt()
     {
         $this->receipt = $this->raw_data['receipt'];
         $this->purchases = [];

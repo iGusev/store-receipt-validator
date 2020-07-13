@@ -80,24 +80,24 @@ interface ResponseInterface extends EnvironmentResponseInterface
      */
     public function getLatestReceiptInfo();
 
-    public function getLatestReceipt(): ?string;
+    public function getLatestReceipt();
 
     public function getBundleId(): string;
 
     public function getAppItemId(): string;
 
-    public function getOriginalPurchaseDate(): ?Carbon;
+    public function getOriginalPurchaseDate();
 
-    public function getRequestDate(): ?Carbon;
+    public function getRequestDate();
 
-    public function getReceiptCreationDate(): ?Carbon;
+    public function getReceiptCreationDate();
 
     /**
      * @return PendingRenewalInfo[]
      */
     public function getPendingRenewalInfo();
 
-    public function getRawData(): ?array;
+    public function getRawData();
 
     public function isValid(): bool;
 

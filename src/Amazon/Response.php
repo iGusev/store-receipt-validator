@@ -116,7 +116,7 @@ class Response
      *
      * @return $this
      */
-    public function parseJsonResponse($jsonResponse = null): self
+    public function parseJsonResponse($jsonResponse = null)
     {
         if (!is_array($jsonResponse)) {
             throw new RuntimeException('Response must be a scalar value');

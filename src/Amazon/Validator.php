@@ -66,7 +66,7 @@ class Validator
      *
      * @return self
      */
-    public function setUserId($userId): self
+    public function setUserId($userId)
     {
         $this->_userId = $userId;
 

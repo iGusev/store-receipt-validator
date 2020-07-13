@@ -1,5 +1,5 @@
 {
-    "name": "aporat/store-receipt-validator",
+    "name": "igusev/store-receipt-validator",
     "description": "PHP receipt validator for Apple iTunes, Google Play and Amazon App Store",
     "type": "library",
     "authors": [
@@ -21,12 +21,12 @@
         "purchase",
         "receipt"
     ],
-    "homepage": "https://github.com/aporat/store-receipt-validator",
+    "homepage": "https://github.com/igusev/store-receipt-validator",
     "license": [
         "Apache-2.0"
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.3",
         "nesbot/carbon": "^1.0|^2.0",

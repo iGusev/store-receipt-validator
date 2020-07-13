@@ -131,7 +131,7 @@ class PendingRenewalInfo implements ArrayAccess
      *
      * @return $this
      */
-    public function parseData(): self
+    public function parseData()
     {
         if (!is_array($this->raw_data)) {
             throw new RunTimeException('Response must be a scalar value');
@@ -204,7 +204,7 @@ class PendingRenewalInfo implements ArrayAccess
      *
      * @return int|null
      */
-    public function getExpirationIntent(): ?int
+    public function getExpirationIntent()
     {
         return $this->expiration_intent;
     }
@@ -214,7 +214,7 @@ class PendingRenewalInfo implements ArrayAccess
      *
      * @return int|null
      */
-    public function isInBillingRetryPeriod(): ?int
+    public function isInBillingRetryPeriod()
     {
         return $this->is_in_billing_retry_period;
     }
@@ -231,7 +231,7 @@ class PendingRenewalInfo implements ArrayAccess
      *
      * @return string|null
      */
-    public function getStatus(): ?string
+    public function getStatus()
     {
         // Active when no expiration intent
         if (null === $this->expiration_intent) {
@@ -254,9 +254,9 @@ class PendingRenewalInfo implements ArrayAccess
     /**
      * Grace Period Expires Date.
      *
-     * @return Carbon
+     * @return Carbon|null
      */
-    public function getGracePeriodExpiresDate(): ?Carbon
+    public function getGracePeriodExpiresDate()
     {
         return $this->grace_period_expires_date;
     }
