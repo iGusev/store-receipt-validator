@@ -168,7 +168,7 @@ abstract class AbstractResponse
      *
      * @return null|string
      */
-    public function getLatestReceipt(): ?string
+    public function getLatestReceipt(): string
     {
         return $this->latest_receipt;
     }
@@ -196,7 +196,7 @@ abstract class AbstractResponse
     /**
      * @return Carbon|null
      */
-    public function getOriginalPurchaseDate(): ?Carbon
+    public function getOriginalPurchaseDate()
     {
         return $this->original_purchase_date;
     }
@@ -204,7 +204,7 @@ abstract class AbstractResponse
     /**
      * @return Carbon|null
      */
-    public function getRequestDate(): ?Carbon
+    public function getRequestDate()
     {
         return $this->request_date;
     }
@@ -212,7 +212,7 @@ abstract class AbstractResponse
     /**
      * @return Carbon|null
      */
-    public function getReceiptCreationDate(): ?Carbon
+    public function getReceiptCreationDate()
     {
         return $this->receipt_creation_date;
     }
@@ -232,7 +232,7 @@ abstract class AbstractResponse
      *
      * @return array
      */
-    public function getRawData(): ?array
+    public function getRawData(): array
     {
         return $this->raw_data;
     }
