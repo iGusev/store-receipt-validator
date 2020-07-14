@@ -66,7 +66,7 @@ interface ResponseInterface extends EnvironmentResponseInterface
 
     public function getResultCode(): int;
 
-    public function setResultCode(int $code): void;
+    public function setResultCode(int $code);
 
     /**
      * @return PurchaseItem[]
