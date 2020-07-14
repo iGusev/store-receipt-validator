@@ -105,7 +105,7 @@ abstract class AbstractResponse
      *
      * @throws RunTimeException
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->raw_data = $data;
         $this->parseData();
@@ -128,7 +128,7 @@ abstract class AbstractResponse
      *
      * @return self
      */
-    public function setResultCode(int $code): void
+    public function setResultCode(int $code)
     {
         $this->result_code = $code;
     }

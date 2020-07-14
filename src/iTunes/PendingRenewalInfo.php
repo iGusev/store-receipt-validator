@@ -118,7 +118,7 @@ class PendingRenewalInfo implements ArrayAccess
      *
      * @throws RunTimeException
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->raw_data = $data;
         $this->parseData();
